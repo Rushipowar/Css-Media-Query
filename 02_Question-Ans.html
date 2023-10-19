@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Gallery</title>
+    <style>
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100%;
+            height: 100vh;
+        }
+        .container img{
+            width: 30%;
+            height: 600px;
+            margin: 15px;
+        }
+
+        @media (min-width: 500px) and (max-width: 800px){
+            .container img{
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 500px){
+            .container img{
+                width: 100%;
+                align-self: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://fastly.picsum.photos/id/977/200/300.jpg?hmac=YYtcm39X8v9y0KYAb_9s-ufIz_R0Kgbt_EP0F8-jkFU" alt="Image 1" >
+        <img src="https://fastly.picsum.photos/id/554/200/300.jpg?hmac=fYkNLoTqHRKUkIc3bZt_xMEb17s_BIRuuKTz8jb9ijs" alt="Image 2" >
+        <img src="https://fastly.picsum.photos/id/715/200/300.jpg?hmac=jMgGkNrRGTz5pgw27YMTCyozftm33Rw2fPKQU2FypW4" alt="Image 3" >
+    </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Flexbox</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container .slider{
+            background-color: rgb(48, 48, 48);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .container .container-main{
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        .container-main .main1, .main2{
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .container .main1{
+            background-color: lightgreen;
+        }
+        .container .main2{
+            background-color: orange;
+        }
+        
+        @media screen and (min-width: 768px){
+            .container {
+            flex-direction: row;
+            }
+            .main1, .main2{
+                flex: 1;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="slider left-slider">Box1</div>
+        <div class="container-main">
+            <div class="main1">Box2</div>
+            <div class="main2">Box3</div>
+        </div>
+        <div class="slider right-slider">Box4</div>
+    </div>
+</body>
+</html>
